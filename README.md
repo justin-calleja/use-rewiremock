@@ -36,3 +36,13 @@ i.e. nothing works. I'm expecting this output:
 1 > ... mocked readFileSync
 2 > ... mocked thing
 ```
+
+## Fix
+
+Adding `rewiremock.enable()` gives expected result:
+
+```ts
+❯ ./node_modules/.bin/ts-node ./src/tmp.ts
+1 > ... mocked readFileSync
+2 > ... mocked thing
+```

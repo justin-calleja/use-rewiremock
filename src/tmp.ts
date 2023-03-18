@@ -10,6 +10,8 @@ rewiremock("./thing").with(() => "... mocked thing");
 // });
 // rewiremock("./thing").with(() => () => "... mocked thing");
 
+rewiremock.enable()
+
 import { readFileSync } from 'fs'
 
 console.log('1 >', readFileSync(`${__dirname}/thing.ts`))
